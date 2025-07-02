@@ -1,29 +1,38 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to bottom right, #ffe6f0, #e0ccff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(to bottom right, #ffe6f0, #e0ccff);
+  box-sizing: border-box;
 }
 
 .game {
-    text-align: center;
-    font-family: 'Comic Sans MS', 'Poppins', sans-serif;
-    background-color: #fff0fa;
-    padding: 2rem;
-    border-radius: 2rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+  background-color: #fff0fa;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
-
 
 .title {
   color: #ff69b4;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
 .status {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
   margin-bottom: 1rem;
 }
@@ -37,19 +46,21 @@
 }
 
 .h2Tag {
-    color: gray;
-    margin-bottom: 10px;
+  color: gray;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .inputTag {
   padding: 10px;
-  width: 200px;
+  width: 100%;
+  max-width: 250px;
   border-radius: 0.8rem;
   border: 2px solid #ffc0cb;
   font-size: 1rem;
- 
   background-color: #ffffff;
-  color: black
+  color: black;
+  box-sizing: border-box;
 }
 
 .startBtn {
@@ -68,58 +79,59 @@
   background-color: #a76af5;
 }
 
-
 .board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    gap: 12px;
-    justify-content: center;
-    margin: 20px auto;
-}
-
-.pTag {
-    color: black;
-    font-size: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 320px;
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
-    font-size: 2rem;
-    font-weight: bold;
-    background-color: #e098d1;
-    border: 3px solid #ffc0cb;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  width: 100%;
+  aspect-ratio: 1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: #e098d1;
+  border: 3px solid #ffc0cb;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .cell:hover {
-    background-color: #d86392;
-    transform: scale(1.05);
+  background-color: #d86392;
+  transform: scale(1.05);
+}
+
+.pTag {
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .resetBtn {
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 1rem;
-     font-family: 'Comic Sans MS', 'Poppins', sans-serif;
-    background-color: #ffb6c1;
-    border: none;
-    color: white;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+  background-color: #ffb6c1;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .resetBtn:hover {
-    background-color: #ff8da1;
-}
-
-
-.buttonContainer {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    gap: 20px
+  background-color: #ff8da1;
 }
