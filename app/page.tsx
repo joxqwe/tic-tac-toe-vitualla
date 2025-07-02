@@ -44,6 +44,7 @@ const TicTacToe = () => {
   return (
   <div className={styles.container}>
     <div className={styles.game}>
+      {/* eslint-disable-next-line react/no-unescaped-entities */}
       <h1 className={styles.title}>Ben Joseph's Tic Tac Toe</h1>
       
       {!namesSet ? (
